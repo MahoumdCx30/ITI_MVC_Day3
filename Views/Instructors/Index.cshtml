@@ -1,0 +1,27 @@
+﻿@* <--!Strong View--> *@
+@model List<Instructor>
+
+<div class="card-container">
+    @foreach (var instructor in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="/Img/@instructor.Img" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@instructor.Name</h5>
+                <a href="/Instructors/Details/@instructor.Id" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .card {
+        flex: 1 1 18rem;
+    }
+</style>

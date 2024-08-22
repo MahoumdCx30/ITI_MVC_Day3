@@ -1,0 +1,23 @@
+﻿@* <--!Strong View--> *@
+@model Instructor
+
+<div class="card-container" style="width: 18rem;">
+        <img src="/Img/@Model.Img" class="card-img-top" alt="...">
+        <div class="card-body">
+        <p class="card-text">Here is ENG: @Model.Name <br>Courses: @Model.Crs_id <br>Address: @Model.Address</p>
+            <h5 class="card-title">@Model.Name</h5>
+        </div>
+    </div>
+
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .card {
+        flex: 1 1 18rem;
+    }
+</style>
+
